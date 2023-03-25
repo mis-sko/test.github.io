@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="witdh=device-width, initial-scale=1">
+        <title>
+            Test
+        </title>
+        <link rel="stylesheet" href="details.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <section class="header">  
+            <nav>
+                <a href="index.html"><img src="images/Doge.png"></a>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="">HOME</a></li>
+                        <li><a href="">ABOUT</a></li>
+                        <li><a href="">TEST</a></li>
+                        <li><a href="">BLOG</a></li>
+                        <li><a href="">MUSIK</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="textbox">
+                <h1>MUSIK</h1>
+            </div>
+            <div class="button">
+                <p>Click here to listen to beats</p>
+                <img src="images/nospit.png" id="icon">
+            </div>
+        </section>
+
+        <audio id="ballin">
+            <source src="images/Mustard - Ballin’ ft. Roddy Ricch.mp3" type="audio/mp3">
+        </audio>
+
+        <script>
+            var ballin = document.getElementById("ballin")
+            var icon = document.getElementById("icon")
+            
+            icon.onclick = function(){
+                if(ballin.paused){
+                    ballin.play();
+                    icon.src = "images/spit.jpg";
+                }else{
+                    ballin.pause();
+                    icon.src = "images/nospit.png";
+                }
+            }
+
+        </script>
+
+    </body>
+</html>
